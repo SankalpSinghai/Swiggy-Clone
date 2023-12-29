@@ -1,0 +1,69 @@
+npm init -y [ y stands for yes, set all the values as default]
+it will initialize project and create a package.json file.
+package.json is configuration for npm 
+
+npm - package manager, will manage package which we will install in the system.
+packages are also known as dependencies.
+npm manages the dependencies.
+
+The most package is bundler.
+what is bundler? 
+
+2 types of dependencies
+1- dev dependencies : required in development phase ( -D flag)
+2- normal dependencies : can be used in production also 
+
+^2.8.4 [ ^ : caret, accepts minor and patch version update] allowed but not exact 
+~2.8.4 [~ : tilde, accepts patch version] - more restrictive 
+
+package and package-lock.json 
+package.json is manifest file, maintained by the developers, specifing project dependencies and meta deta 
+package-lock.json is automatically generated file that ensures consistency in depency version acroos different env installation.
+contains exact version information which gets auto-generatedby npm updated while installing or updating packages. 
+
+package.json is a configuration
+node_modules is a like a db - contains actual data / collection of dependencies
+transitive depency. When we install parcel from npm, it is dependent on other dependencies which also gets called/installed.
+
+
+with package and package-lock, we can regenerate node node_modules
+
+npx parcel index.html [ for dev mode]
+npx parcel build index.html [Remove main from package.json to resolve conflict] --> production mode 
+npx - to execute a package | npm - to install package 
+
+
+** Using cdn links for react is not a good practice, because we would require to make a call and it will be expensive (costly operation)
+it will make network call to unpkg.com and it will get react from unpkg.com 
+if we already have react in node modules, it will be faster 
+also, we will require to keep updaing the link, if new version is arrived.
+
+
+React.createElement is an object. ReactDOM converts it to HTML element and render it. 
+
+Function which returns a piece of react element is Functional component. 
+
+Config driven UI - Read 
+contriolling UI on basis of data
+
+using keys help browser to understand which component to render [ big performance optimization]
+don't use index as keys 
+
+Whenever state variable updates, react triggers a reconcliation cycle (re-renders the component)
+
+# Parcel 
+
+- Hot module replacement
+- Dev Build
+- Local server
+- File watching algorithm : written in C++
+- Caching - Faster Builds
+- Image optimization 
+- Bundling (minify, optimize)
+- Consistent hashing 
+- Differential bunding - support older browsers
+- Error handling
+- Diagnostic 
+- Different dev and production bundles
+- HTTPs 
+- Tree shaking -remove unused code 
