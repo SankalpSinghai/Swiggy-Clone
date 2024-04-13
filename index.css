@@ -1,3 +1,21 @@
-#heading{
-    color: red;
+#heading {
+  color: red;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black
+}
+.logo > img {
+    height: 100px;
+}
+
+.items {
+  list-style: none;
+  display: flex;
+  padding: 20px;
+  font-size: 20px;
+}
+.items > li {
+  margin-right: 15px;
 }

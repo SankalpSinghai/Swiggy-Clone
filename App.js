@@ -1,8 +1,29 @@
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Hello world from react!"
-); //give attributes to tag
-const root = ReactDOM.createRoot(document.getElementById("root"));
+import React from "react";
+import ReactDOM from "react-dom";
 
-root.render(heading);
+const Header = () => {
+  return (
+    <div className="header-container">
+      <div className="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYqw4VsjJFU9zf_-Bl8WgbJhaV6weshtpKyQAoijr6LA&s" />
+      </div>
+      <div className="header-list-items">
+        <ul className="items">
+          <li>Home</li>
+          <li>About us</li>
+          <li>Help</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+    </div>
+  );
+};
+
+ReactDOM.render(<AppLayout />, document.getElementById("root"));
